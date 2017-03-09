@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-09T14:23:11.364Z</updated>
+  <updated>2017-03-09T16:58:04.891Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>五年</title>
+    <link href="http://yoursite.com/2017/03/10/first-blog/"/>
+    <id>http://yoursite.com/2017/03/10/first-blog/</id>
+    <published>2017-03-09T16:06:14.000Z</published>
+    <updated>2017-03-09T16:58:04.891Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="images/img.jpg" alt="Banner"></p>
+<p>我还在上大学的时候，我给自己执行了一个五年计划</p>
+<p>是的，很傻逼对不对</p>
+<p>那时候才多大，连吃饭的钱都不是很充裕</p>
+<p>谈什么五年计划</p>
+<p>但是那个时候还挺认真的对待这个所谓的五年计划</p>
+<ul>
+<li>给自己买一辆自己喜欢的车</li>
+<li>给老婆买一辆自己喜欢的车</li>
+<li>要买一套房子，那种带阁楼带露台的</li>
+</ul>
+<p>后来发现自己傻逼了</p>
+<p>钱太难赚</p>
+<p>参加工作之后这个感觉愈演愈烈</p>
+<p>每个月发了工资之后就开始浪</p>
+<p>浪几天就又盼着赶紧发工资</p>
+<p>好煞笔的想法</p>
+<p>后来自己越来越觉得需要攒钱实现在几的五年计划</p>
+<p>明天继续</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;images/img.jpg&quot; alt=&quot;Banner&quot;&gt;&lt;/p&gt;
+&lt;p&gt;我还在上大学的时候，我给自己执行了一个五年计划&lt;/p&gt;
+&lt;p&gt;是的，很傻逼对不对&lt;/p&gt;
+&lt;p&gt;那时候才多大，连吃饭的钱都不是很充裕&lt;/p&gt;
+&lt;p&gt;谈什么五年计划&lt;/p&gt;
+&lt;p&gt;但
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
