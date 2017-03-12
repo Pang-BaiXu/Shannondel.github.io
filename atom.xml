@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-09T17:06:25.840Z</updated>
+  <updated>2017-03-12T18:12:12.303Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,44 +16,118 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>五年</title>
-    <link href="http://yoursite.com/2017/03/10/%E4%BA%94%E5%B9%B4/"/>
-    <id>http://yoursite.com/2017/03/10/五年/</id>
-    <published>2017-03-09T16:06:14.000Z</published>
-    <updated>2017-03-09T17:06:25.840Z</updated>
+    <title>Git常用命令</title>
+    <link href="http://yoursite.com/2017/03/12/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2017/03/12/Git常用命令/</id>
+    <published>2017-03-12T15:17:33.000Z</published>
+    <updated>2017-03-12T18:12:12.303Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/images/img.jpg" alt="Banner"></p>
-<p>我还在上大学的时候，我给自己执行了一个五年计划</p>
-<p>是的，很傻逼对不对</p>
-<p>那时候才多大，连吃饭的钱都不是很充裕</p>
-<p>谈什么五年计划</p>
-<p>但是那个时候还挺认真的对待这个所谓的五年计划</p>
+    <content type="html"><![CDATA[<p><img src="http://p1.bpimg.com/4851/99a15aa95b32e793.png" alt="Git"></p>
+<blockquote>
+<p>首先，git是个好东西。<br>看到这篇文章的也都明白。<br>这篇只是针对新入门git的同学们，希望我踩的坑可以帮到更多的人。</p>
+</blockquote>
+<p>git的概念：一个通过分支来进行多人协作的版本控制工具。</p>
+<p><img src="http://p1.bqimg.com/4851/9193928c586023f0.png" alt="Git-branch"></p>
+<!-- MarkdownTOC -->
 <ul>
-<li>给自己买一辆自己喜欢的车</li>
-<li>给老婆买一辆自己喜欢的车</li>
-<li>要买一套房子，那种带阁楼带露台的</li>
+<li>安装与配置</li>
+<li>创建副本</li>
+<li>本地git版本控制<ul>
+<li>查看文件状态</li>
+<li>同步修改记录到index</li>
+<li>将同步到index上的修改记录提交到本地仓库</li>
 </ul>
-<p>后来发现自己傻逼了</p>
-<p>钱太难赚</p>
-<p>参加工作之后这个感觉愈演愈烈</p>
-<p>每个月发了工资之后就开始浪</p>
-<p>浪几天就又盼着赶紧发工资</p>
-<p>好煞笔的想法</p>
-<p>后来自己越来越觉得需要攒钱实现在几的五年计划</p>
-<p>明天继续</p>
+</li>
+<li>将本地仓库推送到远程服务器</li>
+</ul>
+<!-- /MarkdownTOC -->
+<h2 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h2><hr>
+<blockquote>
+<p>无论是Mac还是Linux还是Windows，我认为使用git最方便的还是命令。</p>
+</blockquote>
+<p>安装过程不再赘述，自行Google或者百度。</p>
+<p>安装完之后先执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --list</div></pre></td></tr></table></figure>
+<p>这条命令的意思就是读取你的git配置文件，这个文件保存着你的个人信息和角色等方面的内容。</p>
+<p>使用<code>git config</code>命令，你可以修改git的配置文件来实现git的客制化。</p>
+<p>but，你首先得配置好你的用户昵称和你的邮箱，因为这些信息将会被引用到你之后提交的所有文件中。</p>
+<p>执行以下命令，这条命令只能执行一次，因为git将一直使用该信息来处理你在git系统中所作的一切操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name</div><div class="line">git config --global user.email</div></pre></td></tr></table></figure>
+<p>如果你希望在一个特定的项目中使用不同的名称或邮箱地址，你可以在该项目中运行以下命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config user.name</div><div class="line">git config user.email</div></pre></td></tr></table></figure>
+<h2 id="创建副本"><a href="#创建副本" class="headerlink" title="创建副本"></a>创建副本</h2><hr>
+<blockquote>
+<p>首先大家都知道要从远程服务器拉文件下来<br>这里我们以一般的工作流程来举例</p>
+</blockquote>
+<p>执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone &lt;url&gt; -b dev</div></pre></td></tr></table></figure>
+<p>这条命令将在您的本地系统上创建dev分支，并从远程服务器将文件同步到本地的dev分支。</p>
+<blockquote>
+<p>当我们执行<code>git clone</code>命令之后，我们的本地就相当于有了一个远程服务器所有文件的备份<br>.git文件夹下大家可以简单理解为一部分由<strong>index</strong>组成，另一部分由<strong>本地仓库</strong>组成<br>index存储你的本地文件与你WorkSpace的异同</p>
+</blockquote>
+<p>到这一步，git的精髓才开始，贴一张图增强大家对git版本提交的印象。</p>
+<p><img src="http://p1.bpimg.com/4851/54b9864568879a9e.png" alt="Git-overview"></p>
+<h2 id="本地git版本控制"><a href="#本地git版本控制" class="headerlink" title="本地git版本控制"></a>本地git版本控制</h2><hr>
+<h3 id="查看文件状态"><a href="#查看文件状态" class="headerlink" title="查看文件状态"></a>查看文件状态</h3><p>当我们修改了我们的本地文件之后，我们可以执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git status</div></pre></td></tr></table></figure>
+<p>这条命令用来查看我们的本地项目文件和我们的<strong>index</strong>的有什么异同。</p>
+<h3 id="同步修改记录到index"><a href="#同步修改记录到index" class="headerlink" title="同步修改记录到index"></a>同步修改记录到index</h3><p>如果发现有新的修改过的文件，并且我们确认这些修改都是正确的，执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git add .</div></pre></td></tr></table></figure>
+<p>这里<code>git add .</code>是指我们将本地的文件修改记录全部同步到<strong>index</strong>之上。</p>
+<p>如果要取消<code>git add</code>操作，请执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git rest HEAD`</div></pre></td></tr></table></figure>
+<p>上面的这条命令将会将你的index回滚到你上一次<code>git add</code>之前的状态</p>
+<h3 id="将同步到index上的修改记录提交到本地仓库"><a href="#将同步到index上的修改记录提交到本地仓库" class="headerlink" title="将同步到index上的修改记录提交到本地仓库"></a>将同步到index上的修改记录提交到本地仓库</h3><p>这里我讲两种情况：</p>
+<h4 id="github-模式"><a href="#github-模式" class="headerlink" title="github 模式"></a>github 模式</h4><p>执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit -m &quot;本次提交说明&quot;</div></pre></td></tr></table></figure>
+<h4 id="git-gerrit模式（gerrit请自行了解）"><a href="#git-gerrit模式（gerrit请自行了解）" class="headerlink" title="git + gerrit模式（gerrit请自行了解）"></a>git + gerrit模式（gerrit请自行了解）</h4><p>执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit</div></pre></td></tr></table></figure>
+<p>不出所料的话会进入gerrit的提交信息编辑处</p>
+<blockquote>
+<p>进入之后是以vim编辑模式进行commit信息编辑的</p>
+</blockquote>
+<p>按<code>i</code>进入编辑模式，然后根据你们的git提交格式编辑好commit信息。</p>
+<p>一般格式为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[Project Name]:本次提交的描述信息</div><div class="line"></div><div class="line">Product:项目对应产品</div><div class="line"></div><div class="line">BugID:如果是修改bug就填对应BugID</div><div class="line"></div><div class="line">Description:本次提交的具体描述</div><div class="line"></div><div class="line">Unit Test；单元测试结果</div></pre></td></tr></table></figure>
+<p>确认无误后按<code>Esc</code>退出编辑模式，然后输入<code>:wq</code>保存并退出</p>
+<p>到这一步我们已经将本地做的文件修改同步到了我们的本地仓库</p>
+<p>可以通过执行下面的命令来查看你本地的提交记录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git log</div></pre></td></tr></table></figure>
+<p>这里会将你所有的本地提交记录显示出来，包括你每次提交的<code>changeID</code>。</p>
+<p>如果要取消<code>git commit</code>操作，请执行以下命令：</p>
+<p>git请执行:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git reset &lt;要回滚的commitID&gt;</div></pre></td></tr></table></figure>
+<p>git + gerrit请执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git reset &lt;要回滚的changeID&gt;</div></pre></td></tr></table></figure>
+<h2 id="将本地仓库推送到远程服务器"><a href="#将本地仓库推送到远程服务器" class="headerlink" title="将本地仓库推送到远程服务器"></a>将本地仓库推送到远程服务器</h2><hr>
+<p>这里同样将<code>github</code>模式和<code>git + gerrit</code>模式分开讲：</p>
+<h4 id="github模式"><a href="#github模式" class="headerlink" title="github模式"></a>github模式</h4><p>执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push &lt;远程主机名&gt; &lt;本地分支名&gt; : &lt;远程分支名&gt;</div></pre></td></tr></table></figure>
+<p>一般为<code>git push</code>就可以，因为一般都会为自动追踪分支。</p>
+<h4 id="git-gerrit模式"><a href="#git-gerrit模式" class="headerlink" title="git + gerrit模式"></a>git + gerrit模式</h4><p>执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin HEAD:refs/for/dev</div></pre></td></tr></table></figure>
+<p>上面的命令表示将本地所有提交推送到远程dev分支</p>
+<blockquote>
+<p>但是你提交的文件修改必须通过<code>gerrit</code>系统审核该项目的人Review，之后才可以Submit本次提交将你提交的改动<code>merge</code>到远程分支</p>
+</blockquote>
+<p><strong>另外：</strong></p>
+<p>如果要跳过<code>gerrit</code>代码Review请联系运维人员开启强推权限并执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin HEAD:refs/heads/dev</div></pre></td></tr></table></figure>
+<p>一般不要通过强推。</p>
+<p>OK，以上只对我们日常经常使用的流程做了一个梳理，工作挺忙的，有空写一篇深入的介绍。</p>
+<p>文中若有讲的不太对的地方还请留言指出，以免误人子弟。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;/images/img.jpg&quot; alt=&quot;Banner&quot;&gt;&lt;/p&gt;
-&lt;p&gt;我还在上大学的时候，我给自己执行了一个五年计划&lt;/p&gt;
-&lt;p&gt;是的，很傻逼对不对&lt;/p&gt;
-&lt;p&gt;那时候才多大，连吃饭的钱都不是很充裕&lt;/p&gt;
-&lt;p&gt;谈什么五年计划&lt;/p&gt;
-&lt;p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://p1.bpimg.com/4851/99a15aa95b32e793.png&quot; alt=&quot;Git&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;首先，git是个好东西。&lt;br&gt;看到这篇文章的也都明白。&lt;br&gt;这篇只是针对新入门git的同学们，
     
     </summary>
     
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
   </entry>
   

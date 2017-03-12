@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Shannondel,baixu,xu.bai" />
+  <meta name="keywords" content="Git," />
 
 
 
@@ -95,15 +95,77 @@
 
 
 
-<meta name="description" content="没有什么事情是不懈努力而做不到的。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xu' Notes">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="首先，git是个好东西。看到这篇文章的也都明白。这篇只是针对新入门git的同学们，希望我踩的坑可以帮到更多的人。
+
+git的概念：一个通过分支来进行多人协作的版本控制工具。
+
+
+
+安装与配置
+创建副本
+本地git版本控制
+查看文件状态
+同步修改记录到index
+将同步到index上的修改记录提交到本地仓库
+
+
+将本地仓库推送到远程服务器
+
+
+安装与配置
+
+无论是Mac还是Linux还是Wind">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git常用命令">
+<meta property="og:url" content="http://yoursite.com/2017/03/12/Git常用命令/index.html">
 <meta property="og:site_name" content="Xu' Notes">
-<meta property="og:description" content="没有什么事情是不懈努力而做不到的。">
+<meta property="og:description" content="首先，git是个好东西。看到这篇文章的也都明白。这篇只是针对新入门git的同学们，希望我踩的坑可以帮到更多的人。
+
+git的概念：一个通过分支来进行多人协作的版本控制工具。
+
+
+
+安装与配置
+创建副本
+本地git版本控制
+查看文件状态
+同步修改记录到index
+将同步到index上的修改记录提交到本地仓库
+
+
+将本地仓库推送到远程服务器
+
+
+安装与配置
+
+无论是Mac还是Linux还是Wind">
+<meta property="og:image" content="http://p1.bpimg.com/4851/99a15aa95b32e793.png">
+<meta property="og:image" content="http://p1.bqimg.com/4851/9193928c586023f0.png">
+<meta property="og:image" content="http://p1.bpimg.com/4851/54b9864568879a9e.png">
+<meta property="og:updated_time" content="2017-03-12T18:12:12.303Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xu' Notes">
-<meta name="twitter:description" content="没有什么事情是不懈努力而做不到的。">
+<meta name="twitter:title" content="Git常用命令">
+<meta name="twitter:description" content="首先，git是个好东西。看到这篇文章的也都明白。这篇只是针对新入门git的同学们，希望我踩的坑可以帮到更多的人。
+
+git的概念：一个通过分支来进行多人协作的版本控制工具。
+
+
+
+安装与配置
+创建副本
+本地git版本控制
+查看文件状态
+同步修改记录到index
+将同步到index上的修改记录提交到本地仓库
+
+
+将本地仓库推送到远程服务器
+
+
+安装与配置
+
+无论是Mac还是Linux还是Wind">
+<meta name="twitter:image" content="http://p1.bpimg.com/4851/99a15aa95b32e793.png">
 
 
 
@@ -131,13 +193,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/12/Git常用命令/"/>
 
 
 
 
 
-  <title> Xu' Notes </title>
+  <title> Git常用命令 | Xu' Notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -162,9 +224,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -281,9 +341,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -313,10 +373,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/03/12/Git常用命令/" itemprop="url">
-                  Git常用命令
-                </a>
+                Git常用命令
               
             
           </h2>
@@ -377,9 +434,7 @@
       
 
       
-        
-          
-            <p><img src="http://p1.bpimg.com/4851/99a15aa95b32e793.png" alt="Git"></p>
+        <p><img src="http://p1.bpimg.com/4851/99a15aa95b32e793.png" alt="Git"></p>
 <blockquote>
 <p>首先，git是个好东西。<br>看到这篇文章的也都明白。<br>这篇只是针对新入门git的同学们，希望我踩的坑可以帮到更多的人。</p>
 </blockquote>
@@ -474,46 +529,108 @@
 <p>OK，以上只对我们日常经常使用的流程做了一个梳理，工作挺忙的，有空写一篇深入的介绍。</p>
 <p>文中若有讲的不太对的地方还请留言指出，以免误人子弟。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作分享！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.png" alt="白旭 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/alipay.png" alt="白旭 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
     </div>
+  </div>
 
-    <div>
+
       
     </div>
 
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
+        </div>
+      
+
+      
+        
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2017/03/12/Git常用命令/"
+     data-title="Git常用命令"
+     data-content=""
+     data-url="http://yoursite.com/2017/03/12/Git常用命令/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
           
           </div>
           
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/12/Git常用命令/"
+           data-title="Git常用命令" data-url="http://yoursite.com/2017/03/12/Git常用命令/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -533,8 +650,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.jpg"
@@ -637,6 +763,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装与配置"><span class="nav-number">1.</span> <span class="nav-text">安装与配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建副本"><span class="nav-number">2.</span> <span class="nav-text">创建副本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地git版本控制"><span class="nav-number">3.</span> <span class="nav-text">本地git版本控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看文件状态"><span class="nav-number">3.1.</span> <span class="nav-text">查看文件状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步修改记录到index"><span class="nav-number">3.2.</span> <span class="nav-text">同步修改记录到index</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将同步到index上的修改记录提交到本地仓库"><span class="nav-number">3.3.</span> <span class="nav-text">将同步到index上的修改记录提交到本地仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#github-模式"><span class="nav-number">3.3.1.</span> <span class="nav-text">github 模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-gerrit模式（gerrit请自行了解）"><span class="nav-number">3.3.2.</span> <span class="nav-text">git + gerrit模式（gerrit请自行了解）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将本地仓库推送到远程服务器"><span class="nav-number">4.</span> <span class="nav-text">将本地仓库推送到远程服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#github模式"><span class="nav-number">4.0.1.</span> <span class="nav-text">github模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-gerrit模式"><span class="nav-number">4.0.2.</span> <span class="nav-text">git + gerrit模式</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -749,6 +891,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
